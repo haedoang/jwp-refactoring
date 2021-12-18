@@ -1,6 +1,6 @@
 package kitchenpos.fixtures;
 
-import kitchenpos.domain.MenuProduct;
+import kitchenpos.menu.MenuProduct;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package kitchenpos.domain;
+package kitchenpos.menu;
 
 import javax.persistence.*;
 

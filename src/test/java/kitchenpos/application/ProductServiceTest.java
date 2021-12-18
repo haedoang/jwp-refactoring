@@ -1,7 +1,9 @@
 package kitchenpos.application;
 
 import kitchenpos.dao.ProductDao;
-import kitchenpos.domain.Product;
+import kitchenpos.menu.Product;
+import kitchenpos.menu.ProductRepository;
+import kitchenpos.menu.exception.IllegalPriceException;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -35,7 +37,7 @@ class ProductServiceTest {
     private Product product;
 
     @Mock
-    private ProductDao productDao;
+    private ProductRepository productRepository;
 
     @InjectMocks
     private ProductService productService;
@@ -49,7 +51,7 @@ class ProductServiceTest {
     @DisplayName("상품을 등록할 수 있다.")
     public void create() {
         // given
-        given(productDao.save(any(Product.class))).willReturn(product);
+        given(productRepository.save(any(Product.class))).willReturn(product);
 
         // when
         Product actual = productService.create(product);
@@ -62,28 +64,22 @@ class ProductServiceTest {
     @ValueSource(ints = {-10, -5, -1})
     @DisplayName("상품의 가격은 0 원 이상이어야 한다: int")
     public void createFail(int candidate) {
-        // when
-        product.setPrice(new BigDecimal(candidate));
-
         // then
-        assertThatThrownBy(() -> productService.create(product)).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> product.setPrice(new BigDecimal(candidate))).isInstanceOf(IllegalPriceException.class);
     }
 
     @Test
     @DisplayName("제품 등록 시 유효하지 않은 가격은 등록할 수 없다: null")
     public void createFail2() {
-        //when
-        product.setPrice(null);
-
         // then
-        assertThatThrownBy(() -> productService.create(product)).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> product.setPrice(null)).isInstanceOf(IllegalPriceException.class);
     }
 
     @Test
     @DisplayName("상품의 목록을 조회할 수 있다.")
     public void list() {
         // given
-        given(productDao.findAll()).willReturn(Lists.newArrayList(product));
+        given(productRepository.findAll()).willReturn(Lists.newArrayList(product));
 
         // when
         List<Product> products = productService.list();

@@ -1,6 +1,6 @@
 package kitchenpos.fixtures;
 
-import kitchenpos.domain.Product;
+import kitchenpos.menu.Product;
 
 import java.math.BigDecimal;
 import java.util.Arrays;

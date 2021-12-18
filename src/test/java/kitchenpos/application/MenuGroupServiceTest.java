@@ -1,7 +1,7 @@
 package kitchenpos.application;
 
 import kitchenpos.dao.MenuGroupDao;
-import kitchenpos.domain.MenuGroup;
+import kitchenpos.menu.MenuGroup;
 import kitchenpos.fixtures.MenuGroupFixtures;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,4 +1,4 @@
-package kitchenpos.domain;
+package kitchenpos.menu;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -13,14 +13,15 @@ public class Product {
     @Column(nullable = false)
     private String name;
 
-    private BigDecimal price;
+    @Embedded
+    private Price price;
 
     public Long getId() {
         return id;
     }
 
     public BigDecimal getPrice() {
-        return price;
+        return price.value();
     }
 
     public String getName() {
@@ -36,7 +37,7 @@ public class Product {
     }
 
     public void setPrice(BigDecimal price) {
-        this.price = price;
+        this.price = new Price(price);
     }
 
     @Override
