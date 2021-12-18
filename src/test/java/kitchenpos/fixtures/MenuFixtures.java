@@ -1,6 +1,7 @@
 package kitchenpos.fixtures;
 
 import kitchenpos.menu.Menu;
+import kitchenpos.menu.MenuGroup;
 import kitchenpos.menu.MenuProduct;
 
 import java.math.BigDecimal;
@@ -23,6 +24,15 @@ public class MenuFixtures {
         menu.setPrice(price);
         menu.setMenuGroupId(menuGroupId);
         menu.setMenuProducts(menuProducts);
+        return menu;
+    }
+
+    public static Menu createMenu(Long id, String name, BigDecimal price, MenuGroup menuGroup) {
+        Menu menu = new Menu();
+        menu.setId(id);
+        menu.setName(name);
+        menu.setPrice(price);
+        menu.setMenuGroup(menuGroup);
         return menu;
     }
 

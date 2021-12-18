@@ -50,4 +50,12 @@ public class MenuProduct {
     public Long getMenuId() {
         return menu.getId();
     }
+
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 }

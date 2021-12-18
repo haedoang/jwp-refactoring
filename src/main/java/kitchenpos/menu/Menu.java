@@ -2,6 +2,7 @@ package kitchenpos.menu;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import static javax.persistence.FetchType.*;
@@ -15,15 +16,15 @@ public class Menu {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
-    private BigDecimal price;
+    @Embedded
+    private Price price;
 
     @OneToOne(fetch = LAZY)
     @JoinColumn(name = "menu_group_id", foreignKey = @ForeignKey(name = "fk_menu_menu_group"))
     private MenuGroup menuGroup;
 
     @OneToMany(mappedBy = "menu")
-    private List<MenuProduct> menuProducts;
+    private List<MenuProduct> menuProducts = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -42,11 +43,11 @@ public class Menu {
     }
 
     public BigDecimal getPrice() {
-        return price;
+        return price.value();
     }
 
     public void setPrice(final BigDecimal price) {
-        this.price = price;
+        this.price = new Price(price);
     }
 
     public List<MenuProduct> getMenuProducts() {
@@ -63,5 +64,13 @@ public class Menu {
 
     public Long getMenuGroupId() {
         return this.menuGroup.getId();
+    }
+
+    public void setMenuGroup(MenuGroup menuGroup) {
+        this.menuGroup = menuGroup;
+    }
+
+    public void addMenuProduct(MenuProduct menuProduct) {
+        menuProducts.add(menuProduct);
     }
 }

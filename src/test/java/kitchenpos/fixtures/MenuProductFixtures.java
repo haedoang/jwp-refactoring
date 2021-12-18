@@ -1,6 +1,8 @@
 package kitchenpos.fixtures;
 
+import kitchenpos.menu.Menu;
 import kitchenpos.menu.MenuProduct;
+import kitchenpos.menu.Product;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,6 +20,15 @@ public class MenuProductFixtures {
         menuProduct.setSeq(seq);
         menuProduct.setMenuId(menuId);
         menuProduct.setProductId(productId);
+        menuProduct.setQuantity(quantity);
+        return menuProduct;
+    }
+
+    public static MenuProduct createMenuProduct(Long seq, Menu menu, Product product, long quantity) {
+        MenuProduct menuProduct = new MenuProduct();
+        menuProduct.setSeq(seq);
+        menuProduct.setMenu(menu);
+        menuProduct.setProduct(product);
         menuProduct.setQuantity(quantity);
         return menuProduct;
     }

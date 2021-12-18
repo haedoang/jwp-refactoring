@@ -2,6 +2,7 @@ package kitchenpos.menu;
 
 import kitchenpos.menu.exception.IllegalPriceException;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -17,6 +18,7 @@ import java.util.Objects;
 public class Price {
     public static final BigDecimal MIN_PRICE = BigDecimal.ZERO;
 
+    @Column(nullable = false)
     private BigDecimal price;
 
     protected Price() {

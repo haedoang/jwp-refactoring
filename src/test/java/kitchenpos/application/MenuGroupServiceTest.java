@@ -1,8 +1,7 @@
 package kitchenpos.application;
 
-import kitchenpos.dao.MenuGroupDao;
 import kitchenpos.menu.MenuGroup;
-import kitchenpos.fixtures.MenuGroupFixtures;
+import kitchenpos.menu.MenuGroupRepository;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -14,6 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
+import static kitchenpos.fixtures.MenuGroupFixtures.createMenuGroup;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
@@ -31,21 +31,21 @@ class MenuGroupServiceTest {
     private MenuGroup menuGroup;
 
     @Mock
-    MenuGroupDao menuGroupDao;
+    MenuGroupRepository menuGroupRepository;
 
     @InjectMocks
     MenuGroupService menuGroupService;
 
     @BeforeEach
     void setUp() {
-        menuGroup = MenuGroupFixtures.createMenuGroup(1L, "두마리메뉴");
+        menuGroup = createMenuGroup(1L, "두마리메뉴");
     }
 
     @Test
     @DisplayName("메뉴 그룹을 조회할 수 있다.")
     public void list() {
         // given
-        given(menuGroupDao.findAll()).willReturn(Lists.newArrayList(menuGroup, menuGroup));
+        given(menuGroupRepository.findAll()).willReturn(Lists.newArrayList(menuGroup, menuGroup));
 
         // when
         List<MenuGroup> menuGroups = menuGroupService.list();
@@ -58,7 +58,7 @@ class MenuGroupServiceTest {
     @DisplayName("메뉴 그룹을 등록할 수 있다.")
     public void create() {
         // given
-        given(menuGroupDao.save(any(MenuGroup.class))).willReturn(menuGroup);
+        given(menuGroupRepository.save(any(MenuGroup.class))).willReturn(menuGroup);
 
         // when
         MenuGroup actual = menuGroupService.create(menuGroup);
