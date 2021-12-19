@@ -3,7 +3,6 @@ package kitchenpos.ui;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kitchenpos.application.MenuGroupService;
 import kitchenpos.domain.MenuGroup;
-import kitchenpos.fixtures.MenuGroupFixtures;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,7 +17,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import java.util.Arrays;
 import java.util.List;
 
-import static kitchenpos.fixtures.MenuGroupFixtures.*;
+import static kitchenpos.fixtures.MenuGroupFixtures.createMenuGroup;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.ArgumentMatchers.any;
@@ -48,7 +47,7 @@ class MenuGroupRestControllerTest {
 
     @BeforeEach
     void setUp() {
-        menuGroup = createMenuGroup(1L, "양념치킨");
+        menuGroup = createMenuGroup("양념치킨");
     }
 
     @Test

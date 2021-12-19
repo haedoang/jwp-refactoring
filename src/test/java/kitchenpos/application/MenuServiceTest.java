@@ -66,7 +66,7 @@ public class MenuServiceTest {
 
     @BeforeEach
     void setUp() {
-        MenuGroup menuGroup = createMenuGroup(1L, "두마리메뉴");
+        MenuGroup menuGroup = createMenuGroup( "두마리메뉴");
         product = createProduct( "고추바사삭치킨", new BigDecimal(18_000));
         MenuProduct menuProduct = createMenuProduct(1L, null, product.getId(), 1L);
         menuProducts = createMenuProducts(menuProduct, menuProduct);

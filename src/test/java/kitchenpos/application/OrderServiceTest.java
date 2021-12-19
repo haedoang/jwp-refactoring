@@ -63,8 +63,8 @@ public class OrderServiceTest {
         Product 후라이드 = ProductFixtures.createProduct("후라이드", new BigDecimal(16000));
         Product 양념치킨 = ProductFixtures.createProduct("양념치킨", new BigDecimal(16000));
 
-        MenuGroup 두마리메뉴 = MenuGroupFixtures.createMenuGroup(1L, "두마리메뉴");
-        MenuGroup 한마리메뉴 = MenuGroupFixtures.createMenuGroup(2L, "두마리메뉴");
+        MenuGroup 두마리메뉴 = MenuGroupFixtures.createMenuGroup("두마리메뉴");
+        MenuGroup 한마리메뉴 = MenuGroupFixtures.createMenuGroup("두마리메뉴");
 
 
         MenuProduct 양념치킨두마리메뉴상품 = createMenuProduct(1L, 1L, 1L, 2);
