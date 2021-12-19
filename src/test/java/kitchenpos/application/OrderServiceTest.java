@@ -60,8 +60,8 @@ public class OrderServiceTest {
 
     @BeforeEach
     void setUp() {
-        Product 후라이드 = ProductFixtures.createProduct(1L, "후라이드", new BigDecimal(16000));
-        Product 양념치킨 = ProductFixtures.createProduct(2L, "양념치킨", new BigDecimal(16000));
+        Product 후라이드 = ProductFixtures.createProduct("후라이드", new BigDecimal(16000));
+        Product 양념치킨 = ProductFixtures.createProduct("양념치킨", new BigDecimal(16000));
 
         MenuGroup 두마리메뉴 = MenuGroupFixtures.createMenuGroup(1L, "두마리메뉴");
         MenuGroup 한마리메뉴 = MenuGroupFixtures.createMenuGroup(2L, "두마리메뉴");

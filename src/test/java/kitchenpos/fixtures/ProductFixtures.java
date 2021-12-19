@@ -14,17 +14,7 @@ import java.util.List;
  * description :
  */
 public class ProductFixtures {
-    public static Product createProduct(Long id, String name, BigDecimal price) {
-        Product product = new Product();
-        product.setId(id);
-        product.setName(name);
-        product.setPrice(price);
-        return product;
-    }
-
-    public static List<Product> createProducts(Product... products) {
-        return Arrays.asList(
-                products
-        );
+    public static Product createProduct(String name, BigDecimal price) {
+        return new Product(name, price);
     }
 }
