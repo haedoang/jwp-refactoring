@@ -418,3 +418,13 @@ completePayment() vs setOrderState()
 
 ### 패키지 분리 
 ![image info](./images/packages.png)
+
+
+-- 멀티모듈 포트 구성
+product : 8081
+menu : 8082
+menugrouop : 8083
+order : 8084
+table : 8085
+tablegroup : 8086
+
