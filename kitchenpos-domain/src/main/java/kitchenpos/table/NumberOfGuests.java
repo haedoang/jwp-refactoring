@@ -1,6 +1,6 @@
 package kitchenpos.table;
 
-import kitchenpos.table.exception.IllegalGuestNumberException;
+import common.exception.table.IllegalGuestNumberException;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -32,7 +32,7 @@ public class NumberOfGuests {
 
     private void validate(Integer value) {
         if (Objects.isNull(value) || value < MIN_GUESTS) {
-            throw new IllegalGuestNumberException();
+            throw new IllegalGuestNumberException(value);
         }
     }
 

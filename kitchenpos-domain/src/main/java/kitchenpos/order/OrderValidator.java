@@ -1,13 +1,13 @@
 package kitchenpos.order;
 
+import common.exception.menu.MenuNotFoundException;
+import common.exception.order.OrderLineItemNotFoundException;
+import common.exception.table.InvalidTableException;
+import common.exception.table.OrderTableNotFoundException;
 import kitchenpos.menu.Menu;
 import kitchenpos.menu.MenuRepository;
-import kitchenpos.menu.exception.MenuNotFoundException;
-import kitchenpos.order.exception.OrderLineItemNotFoundException;
 import kitchenpos.table.OrderTable;
 import kitchenpos.table.OrderTableRepository;
-import kitchenpos.table.exception.InvalidTableException;
-import kitchenpos.table.exception.OrderTableNotFoundException;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -42,13 +42,13 @@ public class OrderValidator {
     }
 
     private void validateOrder(Order order) {
-        if(order.getOrderLineItems().isEmpty()) {
+        if (order.getOrderLineItems().isEmpty()) {
             throw new OrderLineItemNotFoundException();
         }
     }
 
     private void validateOrderMenu(Order order, List<Menu> menus) {
-        if(order.getOrderLineItems().size() > menus.size()) {
+        if (order.getOrderLineItems().size() > menus.size()) {
             throw new MenuNotFoundException();
         }
     }

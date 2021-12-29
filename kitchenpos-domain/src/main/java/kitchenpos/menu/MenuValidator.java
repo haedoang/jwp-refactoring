@@ -1,10 +1,10 @@
 package kitchenpos.menu;
 
-import kitchenpos.menu.exception.LimitPriceException;
-import kitchenpos.menu.exception.MenuProductNotFoundException;
-import kitchenpos.product.exception.ProductNotFoundException;
+import common.exception.menu.LimitPriceException;
+import common.exception.menu.MenuProductNotFoundException;
+import common.exception.menugroup.MenuGroupNotFoundException;
+import common.exception.product.ProductNotFoundException;
 import kitchenpos.menugroup.MenuGroupRepository;
-import kitchenpos.menugroup.exception.MenuGroupNotFoundException;
 import kitchenpos.product.Product;
 import kitchenpos.product.ProductRepository;
 import org.springframework.stereotype.Component;

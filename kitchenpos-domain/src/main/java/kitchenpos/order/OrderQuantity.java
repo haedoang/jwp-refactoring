@@ -1,6 +1,6 @@
 package kitchenpos.order;
 
-import kitchenpos.order.exception.IllegalOrderQuantityException;
+import common.exception.order.IllegalOrderQuantityException;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -32,7 +32,7 @@ public class OrderQuantity {
 
     private void validate(Long value) {
         if (Objects.isNull(value) || value < MIN_QUANTITY) {
-            throw new IllegalOrderQuantityException();
+            throw new IllegalOrderQuantityException(value);
         }
     }
 

@@ -1,6 +1,6 @@
 package kitchenpos.menu;
 
-import kitchenpos.menu.exception.IllegalMenuQuantityException;
+import common.exception.menu.IllegalMenuQuantityException;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -32,7 +32,7 @@ public class MenuQuantity {
 
     private void validate(Long value) {
         if (Objects.isNull(value) || value < MIN_QUANTITY) {
-            throw new IllegalMenuQuantityException();
+            throw new IllegalMenuQuantityException(value);
         }
     }
 

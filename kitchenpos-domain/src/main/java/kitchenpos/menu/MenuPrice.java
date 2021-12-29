@@ -1,6 +1,6 @@
 package kitchenpos.menu;
 
-import kitchenpos.menu.exception.IllegalMenuPriceException;
+import common.exception.menu.IllegalMenuPriceException;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -33,7 +33,7 @@ public class MenuPrice {
 
     private void validate(BigDecimal value) {
         if (Objects.isNull(value) || MIN_PRICE.compareTo(value) > 0) {
-            throw new IllegalMenuPriceException();
+            throw new IllegalMenuPriceException(value);
         }
     }
 

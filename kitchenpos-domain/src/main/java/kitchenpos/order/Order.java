@@ -1,6 +1,6 @@
 package kitchenpos.order;
 
-import kitchenpos.order.exception.OrderStatusUpdateException;
+import common.exception.order.OrderStatusUpdateException;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

@@ -1,6 +1,6 @@
 package kitchenpos.table;
 
-import kitchenpos.table.exception.TableGuestNumberUpdateException;
+import common.exception.table.TableGuestNumberUpdateException;
 
 import javax.persistence.*;
 import java.util.Objects;

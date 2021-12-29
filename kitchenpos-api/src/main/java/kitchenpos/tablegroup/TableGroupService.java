@@ -1,8 +1,8 @@
 package kitchenpos.tablegroup;
 
+import common.exception.tablegroup.TableGroupNotFoundException;
 import kitchenpos.tablegroup.dto.TableGroupResponse;
 import kitchenpos.tablegroup.dto.TableGroupSaveRequest;
-import kitchenpos.tablegroup.exception.TableGroupNotFoundException;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
