@@ -19,9 +19,9 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
-import static kitchenpos.menu.fixtures.MenuFixtures.*;
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.메뉴그룹;
-import static kitchenpos.menu.fixtures.MenuProductFixtures.*;
+import static kitchenpos.menu.MenuFixtures.*;
+import static kitchenpos.menugroup.MenuGroupFixtures.메뉴그룹;
+import static kitchenpos.menu.MenuProductFixtures.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.ArgumentMatchers.any;

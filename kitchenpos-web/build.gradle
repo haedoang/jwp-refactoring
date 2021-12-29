@@ -1,3 +1,9 @@
+// test fixture config
+plugins{
+    id "java-library"
+    id "java-test-fixtures"
+    id "maven-publish"
+}
 dependencies {
     implementation project(':kitchenpos-api')
     implementation 'org.flywaydb:flyway-core'

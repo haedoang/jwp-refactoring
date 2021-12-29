@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import kitchenpos.menugroup.application.MenuGroupService;
 import kitchenpos.menugroup.dto.MenuGroupRequest;
 import kitchenpos.menugroup.dto.MenuGroupResponse;
-import kitchenpos.menugroup.ui.MenuGroupRestController;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -19,7 +18,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import java.util.Collections;
 import java.util.List;
 
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.한마리메뉴그룹요청;
+import static kitchenpos.menugroup.MenuGroupFixtures.한마리메뉴그룹요청;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.ArgumentMatchers.any;

@@ -22,14 +22,14 @@ import static kitchenpos.menu.MenuAcceptanceTest.메뉴_등록_되어있음;
 import static kitchenpos.menugroup.MenuGroupAcceptanceTest.메뉴그룹_등록되어있음;
 import static kitchenpos.table.OrderTableAcceptanceTest.주문_테이블_등록되어_있음;
 import static kitchenpos.product.ProductAcceptanceTest.상품_등록되어_있음;
-import static kitchenpos.menu.fixtures.MenuFixtures.메뉴등록요청;
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.한마리메뉴그룹요청;
-import static kitchenpos.menu.fixtures.MenuProductFixtures.메뉴상품등록요청;
-import static kitchenpos.order.fixtures.OrderFixtures.*;
-import static kitchenpos.order.fixtures.OrderLineItemFixtures.주문정보_등록요청;
-import static kitchenpos.table.fixtures.OrderTableFixtures.주문가능_다섯명테이블요청;
-import static kitchenpos.table.fixtures.OrderTableFixtures.주문불가_다섯명테이블요청;
-import static kitchenpos.product.fixtures.ProductFixtures.양념치킨요청;
+import static kitchenpos.menu.MenuFixtures.메뉴등록요청;
+import static kitchenpos.menugroup.MenuGroupFixtures.한마리메뉴그룹요청;
+import static kitchenpos.menu.MenuProductFixtures.메뉴상품등록요청;
+import static kitchenpos.order.OrderFixtures.*;
+import static kitchenpos.order.OrderLineItemFixtures.주문정보_등록요청;
+import static kitchenpos.table.OrderTableFixtures.주문가능_다섯명테이블요청;
+import static kitchenpos.table.OrderTableFixtures.주문불가_다섯명테이블요청;
+import static kitchenpos.product.ProductFixtures.양념치킨요청;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

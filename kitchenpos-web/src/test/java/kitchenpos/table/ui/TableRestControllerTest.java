@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import java.util.Arrays;
 import java.util.List;
 
-import static kitchenpos.table.fixtures.OrderTableFixtures.*;
+import static kitchenpos.table.OrderTableFixtures.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;

@@ -19,11 +19,11 @@ import java.math.BigDecimal;
 
 import static kitchenpos.menugroup.MenuGroupAcceptanceTest.메뉴그룹_등록되어있음;
 import static kitchenpos.product.ProductAcceptanceTest.상품_등록되어_있음;
-import static kitchenpos.menu.fixtures.MenuFixtures.후라이드두마리메뉴요청;
-import static kitchenpos.menu.fixtures.MenuFixtures.후라이드반양념반메뉴요청;
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.*;
-import static kitchenpos.menu.fixtures.MenuProductFixtures.메뉴상품등록요청;
-import static kitchenpos.product.fixtures.ProductFixtures.*;
+import static kitchenpos.menu.MenuFixtures.후라이드두마리메뉴요청;
+import static kitchenpos.menu.MenuFixtures.후라이드반양념반메뉴요청;
+import static kitchenpos.menugroup.MenuGroupFixtures.*;
+import static kitchenpos.menu.MenuProductFixtures.메뉴상품등록요청;
+import static kitchenpos.product.ProductFixtures.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

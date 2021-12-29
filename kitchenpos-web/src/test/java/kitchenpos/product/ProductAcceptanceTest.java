@@ -14,8 +14,8 @@ import org.springframework.http.MediaType;
 
 import java.math.BigDecimal;
 
-import static kitchenpos.product.fixtures.ProductFixtures.메뉴등록요청;
-import static kitchenpos.product.fixtures.ProductFixtures.양념치킨요청;
+import static kitchenpos.product.ProductFixtures.메뉴등록요청;
+import static kitchenpos.product.ProductFixtures.양념치킨요청;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

@@ -25,12 +25,12 @@ import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.메뉴그룹;
-import static kitchenpos.order.fixtures.OrderFixtures.식사중으로_변경요청;
-import static kitchenpos.order.fixtures.OrderFixtures.주문등록요청;
-import static kitchenpos.table.fixtures.OrderTableFixtures.주문가능_다섯명테이블;
-import static kitchenpos.product.fixtures.ProductFixtures.양념치킨;
-import static kitchenpos.product.fixtures.ProductFixtures.후라이드;
+import static kitchenpos.menugroup.MenuGroupFixtures.메뉴그룹;
+import static kitchenpos.order.OrderFixtures.식사중으로_변경요청;
+import static kitchenpos.order.OrderFixtures.주문등록요청;
+import static kitchenpos.table.OrderTableFixtures.주문가능_다섯명테이블;
+import static kitchenpos.product.ProductFixtures.양념치킨;
+import static kitchenpos.product.ProductFixtures.후라이드;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.ArgumentMatchers.anyLong;

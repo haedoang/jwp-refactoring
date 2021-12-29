@@ -7,7 +7,7 @@ import kitchenpos.menugroup.domain.MenuGroup;
 import kitchenpos.menugroup.domain.MenuGroupRepository;
 import kitchenpos.product.domain.Product;
 import kitchenpos.product.domain.ProductRepository;
-import kitchenpos.table.fixtures.OrderTableFixtures;
+import kitchenpos.table.OrderTableFixtures;
 import kitchenpos.table.domain.OrderTable;
 import kitchenpos.table.domain.OrderTableRepository;
 import org.assertj.core.util.Lists;
@@ -20,9 +20,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.메뉴그룹;
-import static kitchenpos.menu.fixtures.MenuProductFixtures.*;
-import static kitchenpos.product.fixtures.ProductFixtures.*;
+import static kitchenpos.menugroup.MenuGroupFixtures.메뉴그룹;
+import static kitchenpos.menu.MenuProductFixtures.*;
+import static kitchenpos.product.ProductFixtures.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 

@@ -13,7 +13,7 @@ import org.springframework.http.MediaType;
 
 import java.util.List;
 
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.*;
+import static kitchenpos.menugroup.MenuGroupFixtures.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

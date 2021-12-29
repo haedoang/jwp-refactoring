@@ -7,4 +7,6 @@ jar {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    testImplementation(testFixtures(project(":kitchenpos-web")))
+    testImplementation 'org.assertj:assertj-core:3.19.0'
 }

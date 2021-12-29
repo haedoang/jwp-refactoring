@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static kitchenpos.order.fixtures.OrderLineItemFixtures.주문정보;
+import static kitchenpos.order.OrderLineItemFixtures.주문정보;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 

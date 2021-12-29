@@ -7,7 +7,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.List;
 
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.한마리메뉴그룹요청;
+import static kitchenpos.menugroup.MenuGroupFixtures.한마리메뉴그룹요청;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 

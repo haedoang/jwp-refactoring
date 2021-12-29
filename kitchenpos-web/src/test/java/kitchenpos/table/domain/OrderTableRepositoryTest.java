@@ -20,12 +20,12 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static kitchenpos.menugroup.fixtures.MenuGroupFixtures.메뉴그룹;
-import static kitchenpos.menu.fixtures.MenuProductFixtures.*;
-import static kitchenpos.product.fixtures.ProductFixtures.양념치킨;
-import static kitchenpos.product.fixtures.ProductFixtures.후라이드;
-import static kitchenpos.table.fixtures.OrderTableFixtures.주문가능_다섯명테이블요청;
-import static kitchenpos.table.fixtures.OrderTableFixtures.주문불가_다섯명테이블요청;
+import static kitchenpos.menugroup.MenuGroupFixtures.메뉴그룹;
+import static kitchenpos.menu.MenuProductFixtures.*;
+import static kitchenpos.product.ProductFixtures.양념치킨;
+import static kitchenpos.product.ProductFixtures.후라이드;
+import static kitchenpos.table.OrderTableFixtures.주문가능_다섯명테이블요청;
+import static kitchenpos.table.OrderTableFixtures.주문불가_다섯명테이블요청;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 

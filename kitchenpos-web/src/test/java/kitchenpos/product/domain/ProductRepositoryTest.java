@@ -12,7 +12,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static kitchenpos.product.fixtures.ProductFixtures.양념치킨요청;
+import static kitchenpos.product.ProductFixtures.양념치킨요청;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertAll;
